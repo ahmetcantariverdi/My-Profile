@@ -1,0 +1,145 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Body */
+body {
+  background: url("/img/Background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fefefe;
+}
+
+/* Navbar */
+nav {
+  background: #666769 ;
+  color: #01082d;
+}
+
+/* Profile */
+.profile {
+  border: 2px solid #01082d;
+  width: 55px;
+}
+
+/* Ana container */
+.container {
+  background: linear-gradient(270deg, #6c6c6c, #3e3e3e, #1b1b1b);
+  min-height: 500px;         /* height yerine min-height, daha esnek */
+  margin-top: 5%;
+  border-radius: 20px;
+  border: 3px solid #000000;
+  box-shadow: 0 8px 20px rgba(250, 248, 248, 0.704),
+              0 4px 10px rgba(44, 44, 44, 0.544);
+  padding: 1rem;             
+}
+
+
+.Email, .insta, .whatsap, .write {
+  border-radius: 20px;
+  width: 30%;
+  height: 300px;
+  display: flex;                    
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.Email {
+  background: linear-gradient(270deg, #7e7e7e, #bebebe, #ffffff);
+  color: #01082d;
+  border: 2px solid #01082d;
+  box-shadow: 0 8px 20px rgba(85, 85, 85, 0.704),
+              0 4px 10px rgba(82, 82, 82, 0.544);
+}
+
+
+.insta {
+  background: linear-gradient(270deg, #7b034b, #8904a0, #701d9d);
+  border: 2px solid #fafafa;
+  animation: gradientMove 12s ease infinite;
+  box-shadow: 0 8px 20px rgba(91, 2, 135, 0.704),
+              0 4px 10px rgba(55, 1, 116, 0.544);
+}
+
+
+.whatsap {
+  background: linear-gradient(270deg, #046708, #48a004, #669d1d);
+  border: 2px solid #fafafa;
+  animation: gradientMove 12s ease infinite;
+  box-shadow: 0 8px 20px rgba(28, 167, 0, 0.704),
+              0 4px 10px rgba(15, 100, 2, 0.544);
+}
+
+
+.write {
+  background: linear-gradient(270deg, #041967, #1104a0, #1d289d);
+  border: 2px solid #fafafa;
+  animation: gradientMove 12s ease infinite;
+  box-shadow: 0 8px 20px rgba(7, 41, 167, 0.704),
+              0 4px 10px rgba(2, 21, 73, 0.544);
+}
+
+
+.icon {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #fefefe;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+@keyframes gradientMove {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+
+}
+.insta, .whatsap, .write {
+  background-size: 600% 600%;
+}
+
+
+@media (max-width: 992px) {
+  .container {
+    min-height: 1200px;       
+    box-shadow: none;        
+  }
+
+*/
+  .d-flex {
+    flex-direction: column !important; 
+  }
+
+  .Email, .insta, .whatsap, .write {
+    width: 90%;
+    height: 280px;
+    margin: 0 auto;
+  }
+
+  .icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  h5 {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;               
+  }
+}
+
+@media (max-width: 576px) {
+  .container { min-height: 1300px; }
+  .Email, .insta, .whatsap, .write { height: 300px; }
+  .icon { width: 90px; height: 90px; }
+}
+
+
+.button{
+  
+  background: #06094d;
+    box-shadow: 0 8px 20px rgba(7, 41, 167, 0.704),
+              0 4px 10px rgba(2, 21, 73, 0.544);
+}

@@ -9,6 +9,21 @@
   <link rel="stylesheet" href="css/index.css">
   <title>AhmetCan|About</title>
 </head>
+<body class="night-mode">
+
+<div class="wrap-box">
+  <div class="toggle-wrap" id="wrap">
+    <svg class="moon-icon " viewBox="0 0 24 24">
+      <path id="moonPath" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="#888780" stroke-width="1.8"
+        fill="none" />
+    </svg>
+    <button class="pill-track day" id="pill">
+      <div class="pill-fill"></div>
+      <div class="pill-thumb"></div>
+    </button>
+  </div>
+</div>
+
 
 <div class="container rounded-3">
   <h5 class="fw-bold text-center">A BIT ABOUT ME</h5>
@@ -23,67 +38,79 @@
   </div>
 
   <p>
-Hello, I'm Ahmet Can Tanrıverdi.
-<br>
-I am currently developing my skills in HTML, CSS, and JavaScript. My English level is currently A1, but I am working on improving it every day. I am also learning Russian. Although I am still at a beginner level, I am determined to keep learning and improving.
-<br>
-I am currently preparing for the YKS exam in Türkiye, and one of my main goals is to pass the exam and study at a good university with a Faculty of Law. Programming is not only an area I am interested in, but also one of my biggest hobbies. I enjoy learning new things, improving my skills, and discovering new ideas.
-<br>
-Learning foreign languages is also something I enjoy. I am learning English and Russian both as hobbies and as a way to improve myself and expand my perspective.
-<br>
-In my free time, I also enjoy writing books. I am currently planning a book series called **"Bloody Throne."** The series will include elements of psychology, drama, a dark future, revenge, and a little bit of romance. Whether the book becomes popular or not is not the most important thing to me. I am writing it because I genuinely enjoy writing and creating my own stories.
-<br>
-I also love reading books. Reading allows me to discover new ideas, see things from different perspectives, and continue improving myself.
-<br>
-My current main goal is to succeed in the YKS exam and study Law at a good university. I have many things I want to learn, create, and accomplish, and I am taking it one step at a time.
-<br>
-If you've made it this far, thank you for reading! :)
-
+    Hello, I'm Ahmet Can Tanrıverdi.
+    <br>
+    I am currently developing my skills in HTML, CSS, and JavaScript. My English level is currently A1, but I am working
+    on improving it every day. I am also learning Russian. Although I am still at a beginner level, I am determined to
+    keep learning and improving.
+    <br>
+    I am currently preparing for the YKS exam in Türkiye, and one of my main goals is to pass the exam and study at a
+    good university with a Faculty of Law. Programming is not only an area I am interested in, but also one of my
+    biggest hobbies. I enjoy learning new things, improving my skills, and discovering new ideas.
+    <br>
+    Learning foreign languages is also something I enjoy. I am learning English and Russian both as hobbies and as a way
+    to improve myself and expand my perspective.
+    <br>
+    In my free time, I also enjoy writing books. I am currently planning a book series called **"Bloody Throne."** The
+    series will include elements of psychology, drama, a dark future, revenge, and a little bit of romance. Whether the
+    book becomes popular or not is not the most important thing to me. I am writing it because I genuinely enjoy writing
+    and creating my own stories.
+    <br>
+    I also love reading books. Reading allows me to discover new ideas, see things from different perspectives, and
+    continue improving myself.
+    <br>
+    My current main goal is to succeed in the YKS exam and study Law at a good university. I have many things I want to
+    learn, create, and accomplish, and I am taking it one step at a time.
+    <br>
+    If you've made it this far, thank you for reading! :)
   </p>
+  <div class="box-nav d-flex justify-content-center align-items-center gap-5">
 
-  <div class="">
+    <div class="box-com">
+    <img src="icons/books-icone.png" alt="" class="icons">
+    </div>
+
+    <div class="box-book">
+    <img src="icons/communication.png" alt="" class="icons ">
+    </div>
 
   </div>
 </div>
 
+<!--! massage -->
+<!--* <div class="toast-container">
+  <div class="toast" id="toast1">
+    <div class="toast-header">
+      <strong class="me-auto">Duyuru</strong>
+      <small class="time"></small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+    </div>
+    <div class="toast-body">
+      massage
+      <img src="icons/firework (1).png" class="icons">
+    </div>
+  </div>
 
+  <div class="toast" id="toast2">
+    <div class="toast-header">
+      <strong class="me-auto">Bilgi</strong>
+      <small class="time"></small>
+      <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+    </div>
+    <div class="toast-body">
+    massage
+      <img src="icons/firework (1).png" class="icons">
+    </div>
+  </div>
+</div>
+-->
 
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
   integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
   integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-<script>
-  const box = document.querySelector('.box');
-  let isDown = false;
-  let startx;
-  let scrollLeft;
-
-  box.addEventListener('mousedown', (e) => {
-    isDown = true;
-    startx = e.pageX - box.offsetLeft;
-    scrollLeft = box.scroll;
-  });
-  box.addEventListener('mouseleave', () => { isDown = false; });
-  box.addEventListener('mouseup', () => { isDown = false; });
-  box.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const X = e.pageX - box.offsetLeft;
-    const walk = (X - startx) * 2;
-    box.scrollLeft = scrollLeft - walk;
-  });
-
-  box.addEventListener('touchstart', (e) => {
-    startx = e.touches[0].pageX;
-    scrollLeft = box.scrollLeft;
-  }, { passeve: true });
-  box.addEventListener('touchmove', (e) => {
-    const X = e.touches[0].pageX;
-    const wlak = (X - startx) * 2;
-    box.scrollLeft = scrollLeft - wlak;
-  }, { passive: true })
-</script>
+<script src="index.js"></script>
 </body>
 
 </html>

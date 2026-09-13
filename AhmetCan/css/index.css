@@ -1,78 +1,87 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  background: url("/img/Background.jpg") no-repeat center center fixed;
-  background-size: cover;
-  color: #060606;
+body.night-mode {
+  background: #0d1117 !important;
+  color: #fff;
+}
+
+body.night-mode .container {
+  background: rgba(34, 34, 65, 0.4) !important;
 }
 
 .container {
-  background: #ffffff47 !important;
   padding: 50px;
   margin-top: 100px;
   width: 100%;
-  box-shadow: 0 8px 20px rgba(247, 246, 246, 0.704),
+
+  background: rgba(255, 255, 255, 0.28);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 8px 20px rgba(247, 246, 246, 0.704),
     0 4px 10px rgba(82, 82, 82, 0.544);
+
   animation: shadowPulse 2s infinite alternate;
+
+  transition:
+    background 0.5s ease,
+    color 0.5s ease,
+    box-shadow 0.5s ease;
 }
 
 @keyframes shadowPulse {
+
   0% {
-    box-shadow: 0 0 20px 10px #8b8b8bc7 !important;
+    box-shadow:
+      0 0 20px 10px #8b8b8bc7;
   }
 
   100% {
-    box-shadow: 0 0 20px 10px #ffffff !important;
+    box-shadow:
+      0 0 20px 10px #ffffff;
   }
 }
 
 .AhmetFoto {
   display: block;
+
   width: 300px;
+
   margin: 10px auto !important;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35),
-    inset 0 0 20px rgba(1, 8, 45, 0.6) !important;
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.35),
+    inset 0 0 20px rgba(1, 8, 45, 0.6);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
-.title-1{
+
+.AhmetFoto:hover {
+  transform: scale(1.02);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+
+.title-1 {
   color: chocolate;
+
+  transition: color 0.4s ease;
 }
+
 .name {
   color: #030303;
-}
 
-.books-img {
-  width: 300px;
-  height: 480px;
-  border-radius: 20px;
-}
-
-.book-1,
-.book-2 {
-  background: #251702;
-  border-radius: 20px;
-  width: 300px;
-  height: 480px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4),
-    0 0 15px rgba(255, 255, 255, 0.616) inset;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.new-books {
-  background: #251702;
-  border-radius: 20px;
-  height: 100%;
-  width: 100%;
-}
-
-.book-1:hover,
-.book-2:hover,
-.new-books:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5),
-    0 0 20px rgba(255, 255, 255, 0.15) inset;
+  transition: color 0.4s ease;
 }
 
 .add {
@@ -82,80 +91,297 @@ body {
 
 .visit {
   background: #3d1900;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .box-1 {
   background: #7070703e;
+
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.704),
+
+  box-shadow:
+    0 8px 20px rgba(255, 255, 255, 0.704),
     0 4px 10px rgba(71, 70, 70, 0.544);
+
+  transition:
+    background 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .title {
   background: #0000005b;
-  box-shadow: 0 8px 20px rgba(85, 85, 85, 0.704),
+
+  box-shadow:
+    0 8px 20px rgba(85, 85, 85, 0.704),
     0 4px 10px rgba(82, 82, 82, 0.544);
 }
 
-/* tabl */
-@media (max-width: 992px) {
+/** Night mode  */
+body.night-mode {
+  background: #0d1117 !important;
 
-  .container {
-    background: #ffffff47 !important;
-    margin-top: 100px;
-    width: 80%;
-    box-shadow: 0 8px 20px rgba(247, 246, 246, 0.704),
-      0 4px 10px rgba(82, 82, 82, 0.544);
-    animation: shadowPulse 2s infinite alternate;
-  }
+  color: #ffffff;
 
-  .AhmetFoto {
-    width: 250px;
-  }
-
-  .box {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-  }
+  transition:
+    background 0.5s ease,
+    color 0.5s ease;
 }
 
-/* app */
-@media (max-width: 576px) {
-  .container {
-    width: 95%;
-    margin-top: 60px;
-  }
+body.night-mode .container {
+  background: rgba(34, 34, 65, 0.4) !important;
 
-  .AhmetFoto {
-    width: 180px;
-    border: 3px solid #000;
-  }
+  color: #ffffff;
 
-  .box {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-  }
+  box-shadow:
+    0 0 20px rgba(0, 0, 120, 0.8),
+    0 0 40px rgba(0, 0, 255, 0.25);
+}
 
-  .book-1,
-  .book-2,
-  .new-books {
-    width: 100%;
-    height: 50%;
-  }
+body.night-mode .name {
+  color: #ffffff;
+}
 
-  .books-img {
-    width: 100%;
-    height: 40%;
-  }
+body.night-mode .title-1 {
+  color: #ffb347;
+}
 
-  .add {
+body.night-mode .box-1 {
+  background: rgba(10, 10, 30, 0.7);
 
-    margin-top: -100px;
-    width: 100%;
-    height: 500px;
-  }
+  box-shadow:
+    0 0 15px rgba(80, 80, 255, 0.3);
+}
 
+body.night-mode .title {
+  background: rgba(5, 5, 25, 0.8);
+
+  box-shadow:
+    0 0 15px rgba(100, 100, 255, 0.3);
+}
+
+
+.box-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    padding: 15px;
+
+    border-radius: 25px;
+
+    background: rgba(51, 51, 51, 0.04);
+
+    box-shadow:
+        inset 0 0 15px rgba(0, 0, 0, 0.25);
+
+    transition:
+        background 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.box-book {
+
+    position: relative;
+
+    border-radius: 20px;
+
+    opacity: 0.35;
+
+    transform: scale(0.96);
+
+    padding: 10px;
+
+    background:
+        linear-gradient(
+            #21140c,
+            #21140c
+        ) padding-box,
+
+        linear-gradient(
+            120deg,
+            #6b3214,
+            #b76525,
+            #e4a45c,
+            #b76525,
+            #6b3214
+        ) border-box;
+
+    border: 2px solid transparent;
+
+    background-size:
+        100% 100%,
+        300% 300%;
+
+    color: #ffe4bd;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* Kitap üzerine mouse gelince */
+
+body.night-mode .box-book:hover {
+
+    opacity: 1;
+
+    transform: scale(1.03);
+
+    animation:
+        bookGlow 3s linear infinite;
+
+    box-shadow:
+        0 0 8px rgba(181, 91, 35, 0.8),
+        0 0 20px rgba(220, 139, 66, 0.6),
+        0 0 35px rgba(240, 180, 100, 0.35);
+}
+
+
+/* Kitap renk hareketi */
+
+@keyframes bookGlow {
+
+    0% {
+        background-position:
+            0 0,
+            0% 50%;
+    }
+
+    50% {
+        background-position:
+            0 0,
+            100% 50%;
+    }
+
+    100% {
+        background-position:
+            0 0,
+            0% 50%;
+    }
+}
+
+.box-com {
+
+    position: relative;
+
+    border-radius: 20px;
+
+    opacity: 0.35;
+
+    transform: scale(0.96);
+
+    padding: 10px;
+
+    background:
+        linear-gradient(
+            #0c1b22,
+            #0c1b22
+        ) padding-box,
+
+        linear-gradient(
+            120deg,
+            #145369,
+            #238aa8,
+            #68d4ed,
+            #238aa8,
+            #145369
+        ) border-box;
+
+    border: 2px solid transparent;
+
+    background-size:
+        100% 100%,
+        300% 300%;
+
+    color: #d5f7ff;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* İletişim üzerine mouse gelince */
+
+body.night-mode .box-com:hover {
+
+    opacity: 1;
+
+    transform: scale(1.03);
+
+    animation:
+        communicationGlow 3s linear infinite;
+
+    box-shadow:
+        0 0 8px rgba(35, 138, 168, 0.8),
+        0 0 20px rgba(70, 190, 220, 0.6),
+        0 0 35px rgba(104, 212, 237, 0.35);
+}
+
+
+/* İletişim renk hareketi */
+
+@keyframes communicationGlow {
+
+    0% {
+        background-position:
+            0 0,
+            0% 50%;
+    }
+
+    50% {
+        background-position:
+            0 0,
+            100% 50%;
+    }
+
+    100% {
+        background-position:
+            0 0,
+            0% 50%;
+    }
+}
+body.night-mode .icons {
+
+    filter:
+        brightness(0)
+        invert(1);
+
+    transition:
+        filter 0.4s ease;
+}
+
+/** the small boxes at the bottom */
+
+.box-nav {
+  background: #3333330b;
+  box-shadow: inset 15px #00000081;
+  border-radius: 25px;
+  padding: 10px;
+}
+
+.box-com {
+  border-radius: 20px;
+}
+
+.box-book {
+  border-radius: 20px;
+
+}
+
+.box::-webkit-scrollbar {
+  display: none;
+}
+
+.box {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* Scroll none */
@@ -166,4 +392,216 @@ body {
 .box {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.icons {
+  width: 90px !important;
+}
+
+
+
+/* Toast */
+.wrap-box {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  z-index: 9999;
+}
+
+.toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.toast-custom {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.625rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.toast-custom:hover {
+  transform: scale(1.05);
+}
+
+.navbar-brand-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff !important;
+  letter-spacing: 1px;
+}
+
+.night-mode .toast {
+  background-color: #444 !important;
+  color: #f0f0f0;
+  border: none;
+}
+
+.night-mode .toast-header {
+  background-color: #555 !important;
+  color: #f0f0f0;
+  border-bottom: 1px solid #777;
+}
+
+
+.toggle-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.moon-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  transition: filter 0.4s;
+}
+
+.moon-night .moon-icon {
+  filter: drop-shadow(0 0 5px #FAC775) drop-shadow(0 0 2px #EF9F27);
+}
+
+.pill-track {
+  position: relative;
+
+  width: 56px;
+  height: 14px;
+
+  border-radius: 999px;
+
+  background: #B5D4F4;
+
+  cursor: pointer;
+
+  transition:
+    background 0.4s ease;
+
+  border: none;
+
+  padding: 0;
+}
+
+
+.pill-track.night {
+  background: #444441;
+}
+
+.pill-fill {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 50%;
+
+  border-radius: 999px;
+
+  background: #378ADD;
+
+  transition:
+    width 0.4s ease,
+    background 0.4s ease;
+}
+
+
+.pill-track.night .pill-fill {
+  width: 100%;
+
+  background: #FAC775;
+}
+
+.pill-thumb {
+  position: absolute;
+
+  top: 50%;
+  left: 4px;
+
+  transform: translateY(-50%);
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+
+  background: #fff;
+
+  border: 2px solid #378ADD;
+
+  transition:
+    left 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+.pill-track.night .pill-thumb {
+  left: 32px;
+
+  border-color: #FAC775;
+
+  box-shadow:
+    0 0 6px 2px #FAC77566,
+    0 0 12px 4px #EF9F2733;
+}
+
+
+.pill-track.day .pill-thumb {
+  box-shadow:
+    0 0 6px 2px #378ADD44,
+    0 0 10px 3px #B5D4F433;
+}
+
+/* ==================================================
+    TABLET
+================================================== */
+
+@media (max-width: 992px) {
+
+  .container {
+    margin-top: 100px;
+
+    width: 80%;
+  }
+
+  .AhmetFoto {
+    width: 250px;
+  }
+
+  .box {
+    flex-wrap: nowrap;
+
+    overflow-x: auto;
+  }
+}
+
+
+/* ==================================================
+    MOBILE
+================================================== */
+
+@media (max-width: 576px) {
+
+  .container {
+    width: 95%;
+
+    margin-top: 60px;
+
+    padding: 30px 20px;
+  }
+
+  .AhmetFoto {
+    width: 180px;
+
+    border: 3px solid #000;
+  }
+
+  .wrap-box {
+    top: 15px;
+
+    right: 15px;
+  }
 }

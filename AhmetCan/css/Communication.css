@@ -8,17 +8,6 @@ body {
   color: #fefefe;
 }
 
-/* Navbar */
-nav {
-  background: #666769 ;
-  color: #01082d;
-}
-
-/* Profile */
-.profile {
-  border: 2px solid #01082d;
-  width: 55px;
-}
 
 /* Ana container */
 .container {
@@ -46,7 +35,6 @@ nav {
 
 
 .Email {
-  background: linear-gradient(270deg, #7e7e7e, #bebebe, #ffffff);
   color: #01082d;
   border: 2px solid #01082d;
   box-shadow: 0 8px 20px rgba(85, 85, 85, 0.704),
